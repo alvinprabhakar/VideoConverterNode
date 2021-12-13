@@ -17,7 +17,8 @@ const service = {
         const file = req.files.file;
         const folder = req.body.folder;
         folder.replace(/[\_]/g,'/')
-        console.log("Folder" , folder);
+        console.log("Folder" , folder , "File" , file);
+        console.log(__dirname);
         file.mv(`${__dirname}/videos/uploads/${file.name}`, err => {
             if(err){
                 console.error(err);
