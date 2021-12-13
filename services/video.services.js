@@ -19,7 +19,7 @@ const service = {
         folder.replace(/[\_]/g,'/')
         console.log("Folder" , folder , "File" , file);
         console.log(__dirname);
-        file.mv(`${__dirname}/videos/uploads/${file.name}`, err => {
+        file.mv(`services/videos/uploads/${file.name}`, err => {
             if(err){
                 console.error(err);
                 return res.status(500).send(err);
