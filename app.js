@@ -58,4 +58,6 @@ app.use('/upload', videoRouters);
   
 // })
 
-app.listen(port, () => console.log("server started ...."));
+//app.listen(port, () => console.log("server started ...."));
+
+app.listen(process.env.PORT || port);
