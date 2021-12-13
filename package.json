@@ -8,9 +8,8 @@
     "start": "node app.js",
     "server": "node app.js",
     "client": "npm start --prefix reactapp",
-    "dev": "concurrently \"npm run start\" \"npm run client\"",
-    "build": "electron-builder build --win --publish never",
-    "deploy": "electron-builder build --win --publish always"
+    "dev": "concurrently \"npm run start\" \"npm run client\""
+    
   },
   "author": "",
   "license": "ISC",
@@ -24,3 +23,4 @@
     "nodemon": "^2.0.13"
   }
 }
+
