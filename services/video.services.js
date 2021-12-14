@@ -19,14 +19,13 @@ const service = {
         folder.replace(/[\_]/g,'/')
         console.log("Folder" , folder , "File" , file.name);
         console.log(__dirname);
-        //import * from '../services/videos/uploads'
-        file.mv(`../services/videos/uploads/${file.name}`, err => {
+        file.mv(`${__dirname}/${file.name}`, err => {
             if(err){
                 console.error(err);
                 return res.status(500).send(err);
             }
             res.json({fileName: file.name, filepath: `uploads/${file.name}`});
-            ffmpeg(`../services/videos/uploads/${file.name}`).output(`${folder}/output.m3u8`).on('end', () => {
+            ffmpeg(`${__dirname}/${file.name}`).output(`${folder}/output.m3u8`).on('end', () => {
                     console.log('end');
                     let result = {"data" : "Conversion Completed!!!!"}
                     console.log(JSON.stringify(result));
