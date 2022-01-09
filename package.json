@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
- 
     "build": "netlify-lambda build src",
     "start": "netlify-lambda serve src"
-    
   },
   "author": "",
   "license": "ISC",
