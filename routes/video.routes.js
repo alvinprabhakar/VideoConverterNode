@@ -6,7 +6,7 @@ const route = require('express').Router();
 
 
 
-route.post("/",uploadVideo);
+route.get("/",uploadVideo);
 
 
 
